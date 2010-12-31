@@ -27,7 +27,11 @@ namespace TwitNet_Builder
                            Filter = "EXE File(*.exe)|*.exe",
                            InitialDirectory = Application.StartupPath,
                            Title = "Save Stub As..." };
-            StubSaveDialog.ShowDialog();
+            DialogResult showDialog = StubSaveDialog.ShowDialog();
+            if(string.IsNullOrEmpty(StubSaveDialog.FileName) || showDialog != DialogResult.OK)
+            {
+                return;
+            }
 
             //We load the stub and config data (just a url for now)
             Constants.CustomEncryptionKey = EncryptKeyBox.Text;
