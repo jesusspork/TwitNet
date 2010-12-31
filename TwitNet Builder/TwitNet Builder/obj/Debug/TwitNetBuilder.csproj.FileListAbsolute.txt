@@ -1,9 +1,0 @@
-F:\TwitNet\TwitNet Builder\TwitNet Builder\bin\Debug\TwitNet Builder.exe
-F:\TwitNet\TwitNet Builder\TwitNet Builder\bin\Debug\TwitNet Builder.pdb
-F:\TwitNet\TwitNet Builder\TwitNet Builder\obj\Debug\ResolveAssemblyReference.cache
-F:\TwitNet\TwitNet Builder\TwitNet Builder\obj\Debug\TwitNet_Builder.MainForm.resources
-F:\TwitNet\TwitNet Builder\TwitNet Builder\obj\Debug\TwitNet_Builder.Properties.Resources.resources
-F:\TwitNet\TwitNet Builder\TwitNet Builder\obj\Debug\ResGen.read.1.tlog
-F:\TwitNet\TwitNet Builder\TwitNet Builder\obj\Debug\ResGen.write.1.tlog
-F:\TwitNet\TwitNet Builder\TwitNet Builder\obj\Debug\TwitNet Builder.exe
-F:\TwitNet\TwitNet Builder\TwitNet Builder\obj\Debug\TwitNet Builder.pdb

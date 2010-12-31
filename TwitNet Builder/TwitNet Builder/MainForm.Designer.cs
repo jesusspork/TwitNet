@@ -62,7 +62,7 @@
             this.BuildButton.TabIndex = 2;
             this.BuildButton.Text = "Build";
             this.BuildButton.UseVisualStyleBackColor = true;
-            this.BuildButton.Click += new System.EventHandler(this.Button1Click);
+            this.BuildButton.Click += new System.EventHandler(this.BuildButtonClick);
             // 
             // EncryptKeyBox
             // 

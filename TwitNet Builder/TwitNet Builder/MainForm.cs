@@ -20,7 +20,7 @@ namespace TwitNet_Builder
             InitializeComponent();
         }
 
-        private void Button1Click(object sender, EventArgs e)
+        private void BuildButtonClick(object sender, EventArgs e)
         {
             //We find the file name to save as
             SaveFileDialog StubSaveDialog = new SaveFileDialog {
