@@ -1,4 +1,4 @@
-﻿namespace TwitNet_Builder
+﻿namespace TwitNetBuilder
 {
     partial class MainForm
     {

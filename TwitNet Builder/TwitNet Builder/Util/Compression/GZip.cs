@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
-using System.IO;
+﻿using System.IO;
 using System.IO.Compression;
+//using System.Linq;
 
-namespace TwitNet_Builder.Util.Compression
+namespace TwitNetBuilder.Util.Compression
 {
     public static class GZip
     {

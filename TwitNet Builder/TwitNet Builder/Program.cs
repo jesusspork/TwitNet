@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
-namespace TwitNet_Builder
+namespace TwitNetBuilder
 {
     static class Program
     {

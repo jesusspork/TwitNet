@@ -1,10 +1,9 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace TwitNet_Stub.Commands
+namespace TwitNetStub.Util.Network
 {
     sealed class HTTP
     {

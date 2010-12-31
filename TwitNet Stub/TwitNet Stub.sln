@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitNet Stub", "TwitNet Stub\TwitNet Stub.csproj", "{8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitNetStub", "TwitNet Stub\TwitNetStub.csproj", "{8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

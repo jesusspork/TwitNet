@@ -8,8 +8,8 @@
     <ProjectGuid>{68EC7571-A3C1-4F2D-84B9-6B491E16EE87}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TwitNet_Builder</RootNamespace>
-    <AssemblyName>TwitNet Builder</AssemblyName>
+    <RootNamespace>TwitNetBuilder</RootNamespace>
+    <AssemblyName>TwitNetBuilder</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -51,6 +51,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Letter-C-red.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Util\Misc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Letter-C-red.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

