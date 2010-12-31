@@ -1,0 +1,106 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="2" />
+      <Item value="static" priority="3" />
+      <Item value="string" priority="3" />
+      <Item value="Constants`0" priority="5" />
+      <Item value="using" priority="1" />
+      <Item value="System" priority="0" />
+      <Item value="TwitNet_Builder" priority="1" />
+      <Item value="namespace" priority="0" />
+      <Item value="Util" priority="1" />
+      <Item value="Compression" priority="1" />
+      <Item value="Encryption" priority="0" />
+      <Item value="appendData" priority="1" />
+      <Item value="SimpleAES`0" priority="0" />
+      <Item value="new" priority="1" />
+      <Item value="SimpleAES" priority="0" />
+      <Item value="defaultAES" priority="2" />
+      <Item value="Convert`0" priority="0" />
+      <Item value="writer" priority="1" />
+      <Item value="true" priority="1" />
+      <Item value="Encoding`0" priority="0" />
+      <Item value="StubSaveDialog" priority="0" />
+      <Item value="SaveFileDialog" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TwitNet_Builder.Constants">
+      <Item value="StubFileName" priority="0" />
+      <Item value="DefaultEncryptionKey" priority="1" />
+      <Item value="Splitter" priority="0" />
+      <Item value="CustomEncryptionKey" priority="0" />
+      <Item value="ApplicationVersion" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TwitNet_Builder.Util.Encryption.SimpleAES">
+      <Item value="Key" priority="2" />
+      <Item value="EncryptToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="AutoFlush" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.Encoding">
+      <Item value="Default" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.Encoding">
+      <Item value="GetBytes`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="402" fromTop="12" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Compression/f:GZip.cs" caret="250" fromTop="8" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="1280" fromTop="6" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:Constants.cs" caret="373" fromTop="13" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.Designer.cs" caret="3227" fromTop="25" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="11" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="18" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="4" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="10" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="13" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="19" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="14" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="11" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="13" fromTop="0" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7094" fromTop="4" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="7095" fromTop="2" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Compression/f:GZip.cs" caret="184" fromTop="4" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Encryption/f:SimpleAES.cs" caret="133" fromTop="5" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Compression/f:GZip.cs" caret="224" fromTop="7" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="328" fromTop="11" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="2629" fromTop="14" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="1726" fromTop="13" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="988" fromTop="15" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="3080" fromTop="17" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="2829" fromTop="17" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="3110" fromTop="17" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Compression/f:GZip.cs" caret="250" fromTop="8" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/d:Util/d:Compression/f:GZip.cs" caret="631" fromTop="8" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:Constants.cs" caret="5936" fromTop="13" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="866" fromTop="16" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.cs" caret="1280" fromTop="6" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:Constants.cs" caret="582" fromTop="19" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:Constants.cs" caret="471" fromTop="15" />
+      <File id="68EC7571-A3C1-4F2D-84B9-6B491E16EE87/f:MainForm.Designer.cs" caret="3302" fromTop="11" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
