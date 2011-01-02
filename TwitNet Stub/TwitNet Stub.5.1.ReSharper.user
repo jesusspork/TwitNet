@@ -9,25 +9,41 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
       <Item value="public" priority="0" />
+      <Item value="get" priority="0" />
+      <Item value="HTTP`0" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="indexer" priority="0" />
+      <Item value="Finished" priority="0" />
+      <Item value="true" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Program.cs" caret="287" fromTop="12" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="1004" fromTop="16" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Util.cs" caret="17" fromTop="0" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Compression/f:GZip.cs" caret="129" fromTop="6" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:IBotOperation.cs" caret="142" fromTop="8" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Network/f:HTTP.cs" caret="1654" fromTop="11" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:HTTPFlood.cs" caret="424" fromTop="8" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="1208" fromTop="10" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2924" fromTop="103" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="460" fromTop="4" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="691" fromTop="13" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2926" fromTop="103" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="462" fromTop="4" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="693" fromTop="13" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Compression/f:GZip.cs" caret="1085" fromTop="16" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Compression/f:GZip.cs" caret="1085" fromTop="13" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Compression/f:GZip.cs" caret="1085" fromTop="9" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Compression/f:GZip.cs" caret="1085" fromTop="12" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Util.cs" caret="17" fromTop="0" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Compression/f:GZip.cs" caret="1085" fromTop="35" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:IBotOperation.cs" caret="162" fromTop="8" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:HTTPFlood.cs" caret="354" fromTop="5" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:HTTPFlood.cs" caret="173" fromTop="7" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Network/f:HTTP.cs" caret="1692" fromTop="13" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Network/f:HTTP.cs" caret="2033" fromTop="5" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Network/f:HTTP.cs" caret="2422" fromTop="15" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Network/f:HTTP.cs" caret="459" fromTop="15" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Network/f:HTTP.cs" caret="1902" fromTop="11" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:HTTPFlood.cs" caret="655" fromTop="17" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

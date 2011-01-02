@@ -1,0 +1,8 @@
+C:\TwitNet\TwitNet Stub\TwitNet Stub\bin\Debug\stub.exe
+C:\TwitNet\TwitNet Stub\TwitNet Stub\bin\Debug\stub.pdb
+C:\TwitNet\TwitNet Stub\TwitNet Stub\obj\Debug\ResolveAssemblyReference.cache
+C:\TwitNet\TwitNet Stub\TwitNet Stub\obj\Debug\TwitNetStub.Properties.Resources.resources
+C:\TwitNet\TwitNet Stub\TwitNet Stub\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\TwitNet\TwitNet Stub\TwitNet Stub\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\TwitNet\TwitNet Stub\TwitNet Stub\obj\Debug\stub.exe
+C:\TwitNet\TwitNet Stub\TwitNet Stub\obj\Debug\stub.pdb

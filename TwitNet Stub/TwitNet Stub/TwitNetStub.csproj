@@ -62,7 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\HTTPFlood.cs" />
+    <Compile Include="Operations\HTTPFlood.cs" />
     <Compile Include="Util\Network\HTTP.cs" />
     <Compile Include="IBotOperation.cs" />
     <Compile Include="Util\Compression\GZip.cs" />
