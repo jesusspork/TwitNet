@@ -42,7 +42,7 @@
             this.CodePadBox.Name = "CodePadBox";
             this.CodePadBox.Size = new System.Drawing.Size(162, 20);
             this.CodePadBox.TabIndex = 0;
-            this.CodePadBox.Text = "http://jesusspork_.codepad.org/";
+            this.CodePadBox.Text = "http://codepad.org/IxVLt7tT";
             this.CodePadBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CodePadLabel

@@ -63,8 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Release.cs" />
-    <Compile Include="Commands\SwitchMaster.cs" />
     <Compile Include="Operations\ReleaseBotOP.cs" />
     <Compile Include="Operations\HTTPFloodOP.cs" />
     <Compile Include="Operations\SwitchMasterOP.cs" />
@@ -78,8 +76,8 @@
     <Compile Include="Util\AntiCheck\Anti\SysInternals.cs" />
     <Compile Include="Util\AntiCheck\Anti\Virtualized.cs" />
     <Compile Include="Util\Misc\Interop.cs" />
-    <Compile Include="Commands\Network\UDP.cs" />
-    <Compile Include="Commands\Network\Http.cs" />
+    <Compile Include="Util\Network\UDP.cs" />
+    <Compile Include="Util\Network\Http.cs" />
     <Compile Include="IBotOperation.cs" />
     <Compile Include="Util\Compression\GZip.cs" />
     <Compile Include="Main.cs" />
