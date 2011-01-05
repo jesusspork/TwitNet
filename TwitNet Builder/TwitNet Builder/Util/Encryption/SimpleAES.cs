@@ -7,20 +7,20 @@ namespace TwitNetBuilder.Util.Encryption
 {
     class SimpleAES
     {
-        private ICryptoTransform _encryptorTransform;
-        private ICryptoTransform _decryptorTransform;
-        private UTF8Encoding _utfEncoder;
+        private ICryptoTransform EncryptorTransform, DecryptorTransform;
+        private UTF8Encoding UTFEncoder;
         public byte[] Key;
 
         /// <summary>
         /// Return a string of random chars
         /// </summary>
         /// <param name="length">string length</param>
-        string GetRandNum(int length)
+        string getRandNum(int length)
         {
-            const string str = "0123456789!@#$%^&*()";
-            const string str2 = "abcdefghijklmnopqrstuvwxyz";
-            const string str3 = (str + str2);
+            string str = "0123456789!@#$%^&*()";
+            string str2 = "abcdefghijklmnopqrstuvwxyz";
+            string str3;
+            str3 = (str + str2);
             Random random = new Random();
             StringBuilder builder = new StringBuilder(length);
             int i;
@@ -44,14 +44,14 @@ namespace TwitNetBuilder.Util.Encryption
             RijndaelManaged rm = new RijndaelManaged();
 
 
-            Key = Encoding.UTF8.GetBytes(GetRandNum(32).ToString());
-            byte[] vector = Encoding.Default.GetBytes("Ijd0!$FDdg8s(*&J");
+            Key = Encoding.UTF8.GetBytes(Constants.DefaultEncryptionKey);//getRandNum(32).ToString());
+            byte[] Vector = Encoding.Default.GetBytes("Ijd0!$FDdg8s(*&J");
             //Create an encryptor and a decryptor using our encryption method, key, and vector.
-            _encryptorTransform = rm.CreateEncryptor(Key, vector);
-            _decryptorTransform = rm.CreateDecryptor(Key, vector);
+            EncryptorTransform = rm.CreateEncryptor(Key, Vector);
+            DecryptorTransform = rm.CreateDecryptor(Key, Vector);
 
             //Used to translate bytes to text and vice versa
-            _utfEncoder = new System.Text.UTF8Encoding();
+            UTFEncoder = new System.Text.UTF8Encoding();
         }
 
         /// -------------- Two Utility Methods (not used but may be useful) -----------
@@ -76,26 +76,26 @@ namespace TwitNetBuilder.Util.Encryption
 
         /// ----------- The commonly used methods ------------------------------    
         /// Encrypt some text and return a string suitable for passing in a URL.
-        public string EncryptToString(string textValue)
+        public string EncryptToString(string TextValue)
         {
-            return Encoding.Default.GetString(Encrypt(textValue));
+            return Encoding.Default.GetString(Encrypt(TextValue));
         }
 
         /// Encrypt some text and return an encrypted byte array.
-        public byte[] Encrypt(string textValue)
+        public byte[] Encrypt(string TextValue)
         {
             //Translates our text value into a byte array.
-            Byte[] bytes = _utfEncoder.GetBytes(textValue);
+            Byte[] bytes = UTFEncoder.GetBytes(TextValue);
 
             //Used to stream the data in and out of the CryptoStream.
             MemoryStream memoryStream = new MemoryStream();
 
             /*
-             * We will have to write the unencrypted bytes to the stream,
-             * then read the encrypted result back from the stream.
-             */
+         * We will have to write the unencrypted bytes to the stream,
+         * then read the encrypted result back from the stream.
+         */
             #region Write the decrypted value to the encryption stream
-            CryptoStream cs = new CryptoStream(memoryStream, _encryptorTransform, CryptoStreamMode.Write);
+            CryptoStream cs = new CryptoStream(memoryStream, EncryptorTransform, CryptoStreamMode.Write);
             cs.Write(bytes, 0, bytes.Length);
             cs.FlushFinalBlock();
             #endregion
@@ -114,18 +114,18 @@ namespace TwitNetBuilder.Util.Encryption
         }
 
         /// The other side: Decryption methods
-        public string DecryptString(string encryptedString)
+        public string DecryptString(string EncryptedString)
         {
-            return Decrypt(StrToByteArray(encryptedString));
+            return Decrypt(StrToByteArray(EncryptedString));
         }
 
         /// Decryption when working with byte arrays.    
-        public string Decrypt(byte[] encryptedValue)
+        public string Decrypt(byte[] EncryptedValue)
         {
             #region Write the encrypted value to the decryption stream
             MemoryStream encryptedStream = new MemoryStream();
-            CryptoStream decryptStream = new CryptoStream(encryptedStream, _decryptorTransform, CryptoStreamMode.Write);
-            decryptStream.Write(encryptedValue, 0, encryptedValue.Length);
+            CryptoStream decryptStream = new CryptoStream(encryptedStream, DecryptorTransform, CryptoStreamMode.Write);
+            decryptStream.Write(EncryptedValue, 0, EncryptedValue.Length);
             decryptStream.FlushFinalBlock();
             #endregion
 
@@ -135,7 +135,7 @@ namespace TwitNetBuilder.Util.Encryption
             encryptedStream.Read(decryptedBytes, 0, decryptedBytes.Length);
             encryptedStream.Close();
             #endregion
-            return _utfEncoder.GetString(decryptedBytes);
+            return UTFEncoder.GetString(decryptedBytes);
         }
 
         /// Convert a string to a byte array.  NOTE: Normally we'd create a Byte Array from a string using an ASCII encoding (like so).
@@ -146,12 +146,13 @@ namespace TwitNetBuilder.Util.Encryption
             if (str.Length == 0)
                 throw new Exception("Invalid string value in StrToByteArray");
 
+            byte val;
             byte[] byteArr = new byte[str.Length / 3];
             int i = 0;
             int j = 0;
             do
             {
-                byte val = byte.Parse(str.Substring(i, 3));
+                val = byte.Parse(str.Substring(i, 3));
                 byteArr[j++] = val;
                 i += 3;
             }

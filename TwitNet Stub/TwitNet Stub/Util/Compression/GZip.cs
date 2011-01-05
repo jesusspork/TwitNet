@@ -31,5 +31,16 @@ namespace TwitNetStub.Util.Compression
             GC.Collect();
             return output.ToArray();
         }
+
+        public static byte[] CompressData(byte[] data)
+        {
+            MemoryStream output = new MemoryStream();
+            using (GZipStream gZipStream = new GZipStream(output, CompressionMode.Compress, true))
+            {
+                gZipStream.Write(data, 0, data.Length);
+                gZipStream.Close();
+            }
+            return output.ToArray();
+        }
     }
 }

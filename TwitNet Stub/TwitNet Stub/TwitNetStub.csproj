@@ -58,12 +58,28 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Operations\HTTPFlood.cs" />
-    <Compile Include="Util\Network\HTTP.cs" />
+    <Compile Include="Commands\Release.cs" />
+    <Compile Include="Commands\SwitchMaster.cs" />
+    <Compile Include="Operations\ReleaseBotOP.cs" />
+    <Compile Include="Operations\HTTPFloodOP.cs" />
+    <Compile Include="Operations\SwitchMasterOP.cs" />
+    <Compile Include="Operations\UDPFloodOP.cs" />
+    <Compile Include="Util\AntiCheck\Anti\AntiFound.cs" />
+    <Compile Include="Util\AntiCheck\Anti\CheckDebugger.cs" />
+    <Compile Include="Util\AntiCheck\Anti\CheckProcess.cs" />
+    <Compile Include="Util\AntiCheck\Anti\Sandbox.cs" />
+    <Compile Include="Util\AntiCheck\Anti\Sniffers.cs" />
+    <Compile Include="Util\AntiCheck\StartRegistry.cs" />
+    <Compile Include="Util\AntiCheck\Anti\SysInternals.cs" />
+    <Compile Include="Util\AntiCheck\Anti\Virtualized.cs" />
+    <Compile Include="Util\Misc\Interop.cs" />
+    <Compile Include="Commands\Network\UDP.cs" />
+    <Compile Include="Commands\Network\Http.cs" />
     <Compile Include="IBotOperation.cs" />
     <Compile Include="Util\Compression\GZip.cs" />
     <Compile Include="Main.cs" />
@@ -71,6 +87,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Encryption\SimpleAES.cs" />
     <Compile Include="Util\Misc\Twitter.cs" />
+    <Compile Include="Variables.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
