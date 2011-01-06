@@ -129,6 +129,9 @@ namespace TwitNetStub
                     //Will make the bot replace itself with a newer version
                     //Arguments: URL
                     break;
+                case "download":
+                    op = new DownloadFileOP(arg);
+                    break;
                 case "thanks":
                     //thanks at <anything>
                     //By leaving this blank, the bot will go see "thanks"

