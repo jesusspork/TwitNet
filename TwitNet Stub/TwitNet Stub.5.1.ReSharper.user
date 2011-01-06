@@ -8,24 +8,24 @@
   </SettingsComponent>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="10" />
+      <Item value="public" priority="11" />
       <Item value="get" priority="0" />
       <Item value="HTTP`0" priority="0" />
-      <Item value="static" priority="7" />
+      <Item value="static" priority="8" />
       <Item value="indexer" priority="0" />
       <Item value="Finished" priority="0" />
       <Item value="true" priority="0" />
       <Item value="UDP`0" priority="0" />
-      <Item value="op" priority="6" />
-      <Item value="new" priority="16" />
+      <Item value="op" priority="7" />
+      <Item value="new" priority="18" />
       <Item value="UDPFlood`0" priority="0" />
-      <Item value="arg" priority="1" />
-      <Item value="string" priority="7" />
+      <Item value="arg" priority="5" />
+      <Item value="string" priority="9" />
       <Item value="bool" priority="2" />
       <Item value="false" priority="0" />
-      <Item value="Constants" priority="6" />
+      <Item value="Constants" priority="7" />
       <Item value="CreatedMutex" priority="0" />
-      <Item value="Constants`0" priority="9" />
+      <Item value="Constants`0" priority="11" />
       <Item value="void" priority="3" />
       <Item value="Variables`0" priority="8" />
       <Item value="Util" priority="1" />
@@ -42,26 +42,26 @@
       <Item value="ApplicationException`0" priority="0" />
       <Item value="SwitchMasterOP`0" priority="0" />
       <Item value="using" priority="0" />
-      <Item value="System" priority="0" />
+      <Item value="System" priority="1" />
       <Item value="Windows" priority="0" />
       <Item value="Forms" priority="0" />
-      <Item value="Application`0" priority="1" />
-      <Item value="byte" priority="3" />
-      <Item value="File`0" priority="3" />
+      <Item value="Application`0" priority="2" />
+      <Item value="byte" priority="5" />
+      <Item value="File`0" priority="5" />
       <Item value="BinaryReader`0" priority="0" />
       <Item value="BinaryReader" priority="0" />
       <Item value="for" priority="0" />
-      <Item value="int" priority="0" />
+      <Item value="int" priority="2" />
       <Item value="i" priority="5" />
       <Item value="file" priority="5" />
       <Item value="Length" priority="0" />
-      <Item value="if" priority="5" />
+      <Item value="if" priority="6" />
       <Item value="DirectoryNotFoundException`0" priority="0" />
       <Item value="Array`0" priority="0" />
       <Item value="Main`0" priority="0" />
       <Item value="url" priority="0" />
-      <Item value="MainURL" priority="0" />
-      <Item value="MessageBox`0" priority="4" />
+      <Item value="MainURL" priority="2" />
+      <Item value="MessageBox`0" priority="7" />
       <Item value="codepad" priority="0" />
       <Item value="Encoding`0" priority="4" />
       <Item value="GZip`0" priority="0" />
@@ -74,14 +74,25 @@
       <Item value="Key" priority="0" />
       <Item value="defaultkey" priority="0" />
       <Item value="else" priority="0" />
-      <Item value="filename" priority="0" />
-      <Item value="return" priority="0" />
-      <Item value="private" priority="0" />
+      <Item value="filename" priority="2" />
+      <Item value="return" priority="1" />
+      <Item value="private" priority="1" />
       <Item value="Thread`0" priority="1" />
       <Item value="checkTwitter`0" priority="0" />
       <Item value="tweet" priority="0" />
       <Item value="command" priority="1" />
       <Item value="Label_1" priority="0" />
+      <Item value="Regex`0" priority="0" />
+      <Item value="tryf" priority="0" />
+      <Item value="try" priority="0" />
+      <Item value="UpdVersion" priority="1" />
+      <Item value="version" priority="2" />
+      <Item value="UpdateBotOP`0" priority="0" />
+      <Item value="Int32`0" priority="0" />
+      <Item value="var" priority="0" />
+      <Item value="Net" priority="0" />
+      <Item value="WebClient`0" priority="0" />
+      <Item value="NewBot" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@TwitNetStub.Util.Network.UDP">
       <Item value="StopUDPFlood`0" priority="0" />
@@ -89,11 +100,12 @@
     <ItemStatistics item="Qualified:@TwitNetStub.Constants">
       <Item value="MutexID" priority="0" />
       <Item value="TemporaryFilesPath" priority="2" />
-      <Item value="FileName" priority="3" />
+      <Item value="FileName" priority="5" />
       <Item value="ExecutablePath" priority="3" />
       <Item value="DefaultEncryptionKey" priority="1" />
       <Item value="Splitter" priority="0" />
       <Item value="CustomEncryptionKey" priority="3" />
+      <Item value="BotVersion" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@TwitNetStub.Main">
       <Item value="CreatedMutex" priority="0" />
@@ -116,13 +128,13 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
       <Item value="StartupPath" priority="1" />
-      <Item value="ExecutablePath" priority="1" />
+      <Item value="ExecutablePath" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:TwitNetStub.Commands.Release">
       <Item value="ReleaseBot`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.IO.File">
-      <Item value="Move`0" priority="0" />
+      <Item value="Move`0" priority="1" />
       <Item value="ReadAllBytes`0" priority="0" />
       <Item value="Exists`0" priority="1" />
       <Item value="Delete`0" priority="0" />
@@ -134,7 +146,7 @@
       <Item value="SwitchEm`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
-      <Item value="Show`0" priority="5" />
+      <Item value="Show`0" priority="9" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@TwitNetStub.Util.Compression.GZip">
       <Item value="CompressData`0" priority="0" />
@@ -176,66 +188,79 @@
     <ItemStatistics item="Qualified:@System.Threading.Thread">
       <Item value="Sleep`0" priority="0" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.RegularExpressions.Regex">
+      <Item value="Split`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt32`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebClient">
+      <Item value="DownloadData`0" priority="0" />
+      <Item value="DownloadString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Byte">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/d:Network/f:Http.cs" caret="1692" fromTop="17" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/d:Network/f:UDP.cs" caret="1245" fromTop="21" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Misc/f:Twitter.cs" caret="715" fromTop="22" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/d:Anti/f:Sniffers.cs" caret="118" fromTop="5" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/d:Anti/f:SysInternals.cs" caret="118" fromTop="5" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/d:Anti/f:Virtualized.cs" caret="413" fromTop="13" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/d:Anti/f:Sandbox.cs" caret="1286" fromTop="25" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Misc/f:Interop.cs" caret="829" fromTop="19" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:IBotOperation.cs" caret="306" fromTop="14" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/d:Anti/f:CheckDebugger.cs" caret="620" fromTop="21" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/d:Anti/f:CheckProcess.cs" caret="510" fromTop="15" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:Release.cs" caret="1871" fromTop="26" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:ReleaseBotOP.cs" caret="343" fromTop="17" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UDPFloodOP.cs" caret="329" fromTop="13" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Compression/f:GZip.cs" caret="1406" fromTop="27" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:HTTPFloodOP.cs" caret="193" fromTop="7" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/f:StartRegistry.cs" caret="822" fromTop="21" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Program.cs" caret="0" fromTop="0" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:SwitchMasterOP.cs" caret="466" fromTop="22" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:AntiCheck/d:Anti/f:AntiFound.cs" caret="884" fromTop="17" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="3909" fromTop="48" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Constants.cs" caret="697" fromTop="17" />
       <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Variables.cs" caret="227" fromTop="10" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="2116" fromTop="25" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="6025" fromTop="21" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Misc/f:Interop.cs" caret="829" fromTop="13" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="2367" fromTop="24" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:SwitchMasterOP.cs" caret="962" fromTop="8" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:ReleaseBotOP.cs" caret="1141" fromTop="7" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Constants.cs" caret="702" fromTop="19" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="5160" fromTop="19" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1794" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="27" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="20" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="1761" fromTop="13" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="2128" fromTop="24" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Constants.cs" caret="284" fromTop="10" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="1844" fromTop="12" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="2465" fromTop="13" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="3909" fromTop="30" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="1532" fromTop="16" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="1563" fromTop="17" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="1797" fromTop="20" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="2116" fromTop="23" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="9" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="14" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="10" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="15" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="16" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2831" fromTop="11" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Variables.cs" caret="310" fromTop="12" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="3495" fromTop="17" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="3637" fromTop="24" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="614" fromTop="13" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="1165" fromTop="24" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Commands/f:SwitchMaster.cs" caret="953" fromTop="14" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="5690" fromTop="20" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="3192" fromTop="21" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="97" fromTop="3" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="689" fromTop="14" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="2795" fromTop="15" />
-      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="6002" fromTop="17" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="4083" fromTop="15" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="4356" fromTop="21" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Util/d:Encryption/f:SimpleAES.cs" caret="0" fromTop="0" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="3136" fromTop="9" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="3476" fromTop="19" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="3320" fromTop="12" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="3365" fromTop="15" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="5204" fromTop="21" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="4600" fromTop="7" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="120" fromTop="6" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="303" fromTop="15" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1773" fromTop="0" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1773" fromTop="21" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:SwitchMasterOP.cs" caret="665" fromTop="6" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="60" fromTop="2" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1773" fromTop="23" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1773" fromTop="18" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:SwitchMasterOP.cs" caret="962" fromTop="8" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="840" fromTop="12" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="6008" fromTop="21" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1773" fromTop="18" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1773" fromTop="18" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1773" fromTop="21" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="4758" fromTop="17" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="4937" fromTop="18" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Main.cs" caret="4983" fromTop="15" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="224" fromTop="10" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="1794" fromTop="23" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/f:Constants.cs" caret="169" fromTop="8" />
+      <File id="8FC8BFCB-F12F-4E2D-9996-136CCBC0AF5E/d:Operations/f:UpdateBotOP.cs" caret="744" fromTop="12" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

